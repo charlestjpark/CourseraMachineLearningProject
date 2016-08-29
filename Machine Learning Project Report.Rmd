@@ -19,10 +19,10 @@ library(e1071)
 We first load the training and test data for the study. Any attribute that has empty values will 
 be encoded with NA values, using the na.strings argument, to facilitate pre-processing later on. 
 ```{r}
-#urltrain = "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv" 
-#urltest = "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv"
-#download(urltrain, dest = "./train.csv", mode = "wb")
-#download(urltest, dest = "./test.csv", mode = "wb")
+urltrain = "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-training.csv" 
+urltest = "https://d396qusza40orc.cloudfront.net/predmachlearn/pml-testing.csv"
+download(urltrain, dest = "./train.csv", mode = "wb")
+download(urltest, dest = "./test.csv", mode = "wb")
 training = read.csv("train.csv", na.strings= c("NA",""," ")) 
 testing = read.csv("test.csv", na.strings= c("NA",""," "))
 ```
